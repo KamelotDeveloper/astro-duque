@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "main": "index",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -16,6 +17,7 @@
     "photoswipe": "^5.4.4"
   },
   "devDependencies": {
+    "nodemon": "^3.1.4",
     "tailwindcss-animated": "^1.1.2"
   }
 }
