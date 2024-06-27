@@ -1,0 +1,119 @@
+---
+const{currentLocale} = Astro;
+console.log({currentLocale});
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴Duque Hostel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <main class="flex ">
+    <style>
+      /* Estilo personalizado */
+
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 50;
+        animation: pulse 2s infinite alternate;
+      }
+      
+      body {
+        background-color: rgb(245, 247, 241);
+        background-size: screen;
+        background-size:auto
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+      .Instagram-btn {
+        position: fixed;
+        bottom: 6rem;
+        right: 2rem;
+        z-index: 50;
+        animation: pulse 2s infinite alternate;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+ 
+  <body>
+      <!-- header -->
+    <header class="fixed w-screen mb-40 z-10 bg-gradient-to-r from-green-200 via-green-600 to-green-900 shadow-2xl shadow-green-500/50 top-0 px-8 sm: lg:px-0 text-white">
+      
+      <!-- Botones de navegación -->
+      <nav class="flex items-center justify-between max-w-12xl mx-auto py-1 px-4 sm:px-24 lg:px-14">
+      <!--inicio en logo duque -->
+      <a href="/" class="hover:bg-green-200 px-3 py-2 rounded p-4">
+      <img class="h-20 hover:opacity-50 w-40 rounded-xl"
+        src="https://h-img2.cloudbeds.com/uploads/177683/d3556270-e066-4493-a557-78573d761fc5_gallery~~65c8ef35a864a.jpeg"
+        alt="Duque logo"/>
+      </a>
+      
+			<!-- Botón del menú hamburguesa -->
+			<button id="menu-button" class="sm:hidden flex items-center px-4 py-4 border rounded text-white border-white hover:text-green-200 hover:border-green-200">
+        <svg class="sm fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menú</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+</button>
+        <!-- Menú de navegación -->
+        <div id="menu" class="w-auto hidden md:flex flex-nowrap md:space-x-4 space-y-2 ">
+          <a href="https://hotels.cloudbeds.com/reservas/KxVDPO#checkin=2024-06-10&checkout=2024-06-11" target="_blank" class="border-solid border-2 border-green-300 mt-3 hover:bg-green-500 px-4 py-1 mb-2 rounded">Reservas</a>
+          <a href="/nosotros" class="hover:bg-green-00 px-5 py-2 rounded ">Hostel</a>
+          <a href="/servicios" class="pmp run hover:bg-green-700 px-3 py-2 rounded">Quartos</a>
+          <a href="/contacto" class="hover:bg-green-600 px-3 py-2 rounded">Contato</a>
+
+        </div>
+      </nav>
+    </header>
+
+	</header>
+ 
+    <!-- Botón de WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=5548996080084&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn">
+      <img src="whatssapp-logo.png" alt="WhatsApp" class="w-14 h-12">
+    </a> 
+    <!-- Botón de Instagram -->
+    <a href="https://www.instagram.com/duquehostel/" target="_blank" class="Instagram-btn">
+      <img src="instagram-logo.png" alt="Instagram" class="w-16 h-16">
+    </a> 
+   
+      <slot>  </slot>
+   
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var menu = document.getElementById('menu');
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
+  </main>
+</body>
+
+
+  <div class="bg-gradient-to-r from-green-200 via-green-600 to-green-900 shadow py-4 px-4 ">
+    <p class="text-center text-black-500">© Duque Hostel</p>       
+  </div>
+
+
+</html>
+
+

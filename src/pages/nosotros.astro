@@ -1,0 +1,63 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import 'photoswipe/style.css'
+
+---
+
+<MainLayout>
+    <h2 class=" pl-10 text-3xl font-bold mt-40 text-center">A pousada tem:</h2>
+	 
+	<div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto mt-20 mb-6">
+		
+		<ul class="list-outside text-xl font-serif p-10 mb-6">
+			<li class="mb-2">🌴Serviços Wi-Fi</li>
+			<li class="mb-2">🌴Café da manhã incluso</li>
+			<li class="mb-2">🌴Serviços de cozinha</li>
+			<li class="mb-2">🌴serviços de bar</li>
+			<li class="mb-2">🌴Playroom</li>
+			<li class="mb-2">🌴piscina</li>
+		  </ul>	 
+	 <!-- galeria videos -->
+		<div class="text-xl font-serif pswp-example__preview docs-styled-scrollbar grid grid-cols-1 md:grid-cols-4 gap-4 p-5 max-h-auto" role="region" aria-label="Vista previa del código"id="gallery">
+		 <a class="text-center " href="/public/videos/cafe.mp4"
+      	   data-pswp-width="2500" 
+      	   data-pswp-height="1500" 
+       	   target="_blank">
+		 <video src="/public/videos/cafe.mp4"></video>
+		 Café da manhã incluso</a>		 
+		 <a class="text-center" href="/public/videos/bar.mp4"
+      		data-pswp-width="2500" 
+     	    data-pswp-height="1500" 
+      	    target="_blank">
+		 <video src="/public/videos/bar.mp4"></video>
+	Bar</a>
+		<a class="text-center" href="/public/videos/playroom.mp4"
+	   		data-pswp-width="2500" 
+	   		data-pswp-height="1500" 
+	   		target="_blank">
+   <video src="/public/videos/playroom.mp4"></video>
+ Playroom </a>
+	</div>
+</div>
+
+<p class="flex flex-warp justify-center w-full text-xl tracking-wide font-semibold mt-50 mb-20 p-10">TE INVITAMOS A VIVIR LA MAGIA EN DUQUE HOSTEL</p>
+	
+<!-- script galeria video -->
+	 <!-- <script>
+
+		import PhotoSwipeLightbox from 'photoswipe/lightbox';
+		
+		const lightbox = new PhotoSwipeLightbox({
+		  gallery: '#gallery',
+		  children: 'a',
+		  pswpModule: () => import('photoswipe')
+		});
+		lightbox.init();
+		
+		</script> -->
+</MainLayout>
+
+	
+      
+
+
